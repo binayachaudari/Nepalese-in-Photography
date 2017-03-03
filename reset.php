@@ -4,7 +4,7 @@
 */
 
 session_start();
-$db=mysqli_connect("localhost", "id217080_root","9808778653","id217080_registration");
+$db=mysqli_connect("databases.000webhost.com", "id217080_root","9808778653","id217080_registration");
 
 // Make sure email and hash variables aren't empty
 if( isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && !empty($_GET['hash']) )

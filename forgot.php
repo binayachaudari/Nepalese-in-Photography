@@ -2,7 +2,7 @@
 /* Reset your password form, sends reset.php password link */
 
 session_start();
-$db=mysqli_connect("localhost", "id217080_root","9808778653","id217080_registration");
+$db=mysqli_connect("databases.000webhost.com", "id217080_root","9808778653","id217080_registration");
 
 // Check if form submitted with method="post"
 if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) 

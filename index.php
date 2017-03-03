@@ -7,7 +7,7 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true){
 
 $_SESSION['message']='';
 //Escape username to prevent from SQL injection
- $db=mysqli_connect("localhost", "id217080_root","9808778653","id217080_registration");
+$db=mysqli_connect("databases.000webhost.com", "id217080_root","9808778653","id217080_registration");
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $password=mysql_real_escape_string($_POST['pswrd']);

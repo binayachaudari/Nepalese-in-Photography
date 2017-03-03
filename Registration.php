@@ -7,14 +7,14 @@
 
     //connect to database
 
-$db=mysqli_connect("localhost", "id217080_root","9808778653","id217080_registration");
+$db=mysqli_connect("databases.000webhost.com", "id217080_root","9808778653","id217080_registration");
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-        $username=mysql_real_escape_string($_POST['username']);
-        $password=mysql_real_escape_string($_POST['password']);
-        $password2=mysql_real_escape_string($_POST['password2']);
-        $email=mysql_real_escape_string($_POST['Email']);
-        $hash = mysql_real_escape_string( md5( rand(0,1000) ) );
+        $username=$db->escape_string($_POST['username']);
+        $password=$db->escape_string($_POST['password']);
+        $password2=$db->escape_string($_POST['password2']);
+        $email=$db->escape_string($_POST['Email']);
+        $hash = $db->escape_string( md5( rand(0,1000) ) );
         
         $result = $db->query("SELECT * FROM users WHERE email='$email'");
         
